@@ -34,7 +34,7 @@ def get_project_by_title(title):
     print """\
     Project: %s
     Description %s
-    Max Grade: %d""" % (row[0], row[1], row[2]) 
+    Max Grade: %d""" % (row[0], row[1], row[2])
 
 def get_grades_by_project(title):
     query = """SELECT first_name, last_name, github, grade 
