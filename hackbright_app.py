@@ -43,11 +43,7 @@ def get_grades_by_project(title):
     DB.execute(query, (title,))
     rows = DB.fetchall()
     return rows
-    # removed to sync up for webapp
-    # print "OK"
-    # print """\
-    # Project: %s
-    # Grade: %d""" %(row[0], row[1])
+
 
 def update_grade(grade, project_title, student_github):
     query = """UPDATE Grades2 SET grade=? WHERE student_github=? and project_title=?"""
