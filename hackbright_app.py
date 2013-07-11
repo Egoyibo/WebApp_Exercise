@@ -44,12 +44,21 @@ def get_grades_by_project(title):
     rows = DB.fetchall()
     return rows
 
-
 def update_grade(grade, project_title, student_github):
-    query = """UPDATE Grades2 SET grade=? WHERE student_github=? and project_title=?"""
-    DB.execute(query, (grade, student_github, project_title))
+    query = """SELECT * from Grades2 WHERE student_github=? and project_title=?"""
+    DB.execute(query, (student_github, project_title))
+    result = DB.fetchone()
+    print "RESULT IS:",result
+    if result:
+        print "THIS IS UPDATING AN EXISTING PROJECT!"
+        query = """UPDATE Grades2 SET grade=? WHERE student_github=? and project_title=?"""
+        DB.execute(query, (grade, student_github, project_title))
+    else:
+        print "THIS IS A NEW PROJECT GETTING ADDED"
+        query = """INSERT into Grades2 VALUES (?,?,?)"""
+        DB.execute(query, (student_github, project_title, grade))
     CONN.commit()
-    print "Successfully added %s's grade for %s: %d " %(student_github, project_title, int(grade)) 
+    print "ADDING STUFF TO DATABASE!!!! Successfully added %s's grade for %s: %d " %(student_github, project_title, int(grade)) 
 
 def get_grades_by_student(first_name, last_name):
     #query = """SELECT S.first_name, S.last_name, P.title, G.grade

@@ -1,0 +1,35 @@
+h1{
+	color: #EB3923;
+}
+
+h3{
+	color: #6AB8CA;
+}
+
+a:visited{
+	color: #6AB8CA;
+}
+
+a:hover{
+	color: #EB3923 ;
+}
+
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	padding: 5px;
+	background-color: #FEFDFD; 
+}
+th{
+	color: #EB3923;
+}
+
+td{
+	color: #2C9BB5;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	background-color: #FEFDFD;
+}
