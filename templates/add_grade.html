@@ -1,8 +1,6 @@
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% block title%}Add Student Grade | {%endblock%}
+{% block content%}
 	<form action="/new_grade">
 		<label for="github">Student Github</label>
 		<input type="text" name="github"/>
@@ -17,5 +15,4 @@
 	</form>
 
 	<h3><a href="/">Return to HomePage</a></h3>
-</body>
-</html>
+{% endblock %}

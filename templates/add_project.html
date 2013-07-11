@@ -1,8 +1,6 @@
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% block title%}Add Project | {%endblock%}
+{% block content %}
 	<form action="/new_project">
 		<label for="ptitle">Project Title</label>
 		<input type="text" name="ptitle"/>
@@ -17,5 +15,4 @@
 	</form>
 
 	<h3><a href="/">Return to HomePage</a></h3>
-</body>
-</html>
+{% endblock %}

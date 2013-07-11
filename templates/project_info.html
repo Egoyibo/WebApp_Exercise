@@ -1,8 +1,6 @@
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% block title%}Project Information | {%endblock%}
+{% block content%}
 	<h1><center>Project: {{name}}</center></h1>
 	<table>
 		<tr>
@@ -22,6 +20,4 @@
 	</ul>
 
 	<h3><a href="/">Return to HomePage</a></h3>
-
-</body>
-</html>
+{% endblock %}

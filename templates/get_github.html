@@ -1,8 +1,6 @@
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% block title%}{%endblock%}
+{% block content%}
 	<form action="/student">
 		<label for="github">Enter github id</label>
 		<input type="text" name="github"/>
@@ -14,5 +12,4 @@
 	<form action="/add_grade">
 		<input type="submit" value="Add a Grade"/>
 	</form>
-</body>
-</html>
+{% endblock %}
